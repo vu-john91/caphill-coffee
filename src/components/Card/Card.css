@@ -1,0 +1,12 @@
+h3 {
+  font-family: Sacramento;
+  font-size: 30px;
+  color: #35453B
+}
+
+.card {
+  background-color: #D5B9AC;
+  height: 100px;
+  width: 200px;
+  margin: auto
+}
