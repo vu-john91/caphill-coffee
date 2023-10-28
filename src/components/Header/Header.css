@@ -1,0 +1,17 @@
+.header {
+  font-family: Aboreto;
+  background-color: #35453B;
+  color: #D5B9AC;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 24px;
+  }
+}
