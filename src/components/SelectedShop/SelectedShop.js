@@ -9,25 +9,31 @@ const SelectedShop = () => {
     <div className='shopDetailsContainer'>
       <div className='shopDetailsBoxLeft'>
         <div><strong>Address:</strong> {shop.address}</div>
+        <div><strong>Phone number:</strong> {shop.phoneNumber}</div>
+        <div><strong>Website:</strong> <a href={shop.website}>{shop.website}</a></div>
       </div>
-
+      <div className='shopDetailsBoxRight'>
+      <div><strong>Hours:</strong></div>
+      <div><strong>Services:</strong></div>
+      <ul>
+        {shop.dineIn && <li>Dine In</li>}
+        {shop.takeOut && <li>Take Out</li>}
+        {shop.wheelchairAccessible && <li>Wheelchair Accessible</li>}
+        {shop.foodProvided && <li>Food Provided</li>}
+      </ul>
+      </div>
     </div>
-     
-        <div className='shopImage'></div>
-        <div className='shopDetailsContainer'>
-          <div className='shopDetailsBox'></div>
-          <div className='shopDetailsBox'></div>
-        </div>
-        <div className='rating'>average rating: </div>
-        <div className='ratingIcons'>
+    <div className='rating'>Rating: {shop.rating}</div>
+    <div className='ratingIcons'>
           <span role='img' aria-label='thumbs-up'>
             👍
           </span>
           <span role='img' aria-label='thumbs-down'>
             👎
           </span>
+    </div>
         </div>
-      </div>
+  
   );
 };
 
