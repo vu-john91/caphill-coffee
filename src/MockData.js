@@ -3,7 +3,7 @@ const sampleCoffeeShops =
     {
       id: 1,
       name: "Dazbog Coffee",
-      img: "https://example.com/path-to-image.jpg",
+      img: "https://whatnowdenver.com/wp-content/uploads/sites/8/2021/12/Dazbog-Coffee-to-Open-Kiosk-Near-DIA-Photo-1-1024x682.jpg",
       address: "1201 E 9th Ave, Denver, CO 80218",
       rating: 4.3,
       hours: {

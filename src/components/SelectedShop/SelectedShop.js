@@ -14,12 +14,12 @@ const selectedShop = shops.find((shop) => shop.id === parseInt(id));
       {/* tan box container */}
       <div className='page-container'>
       {/* green box container */}
-        <div className='card-container'>
+        <div className='shop-card-container'>
           <div className='img-container'>
             <img
               src={selectedShop.img}
               alt='coffee shop picture'
-              className='shop-img'
+              className='shop-img' 
             />
           </div>
       {/* parent containers left & right */}
@@ -39,15 +39,14 @@ const selectedShop = shops.find((shop) => shop.id === parseInt(id));
             <div className='shop-info-right-container'>
               <p>
                 <strong>Hours:</strong>
+
               </p>
-              <ul>
                 {selectedShop.dineIn && <li>Dine In</li>}
                 {selectedShop.takeOut && <li>Take Out</li>}
                 {selectedShop.wheelchairAccessible && (
                   <li>Wheelchair Accessible</li>
                 )}
-                {selectedShop.foodProvided && <li>Food Provided</li>}
-              </ul>
+                {selectedShop.foodProvided && <li>Food Provided</li>} 
             </div>
           </div>
         {/* rating container */}
