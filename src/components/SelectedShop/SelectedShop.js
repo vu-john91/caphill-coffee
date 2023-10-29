@@ -14,7 +14,7 @@ const SelectedShop = ({ selectedShop }) => {
       {/* tan box container */}
       <div className='page-container'>
       {/* green box container */}
-        <div className='selected-shop-info-container'>
+        <div className='card-container'>
           <div className='img-container'>
             <img
               src={selectedShop.img}

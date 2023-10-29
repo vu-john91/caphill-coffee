@@ -1,0 +1,33 @@
+h2 {
+  font-family: Gotu;
+}
+
+.img-container {
+  flex: 1;
+  max-width: 500px;
+  padding: 15px;
+  border: 5px solid black;
+  overflow: hidden;
+}
+
+.shop-img {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  display: block;
+  object-fit: cover;
+}
+
+.card-container {
+  align-items: center;
+  justify-content: center;
+  background-color: #808D88;
+  border: 5px solid #808D88;
+  margin: 20px;
+  height: 70%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 10px;
+  padding: 20px;
+  overflow: auto
+}
