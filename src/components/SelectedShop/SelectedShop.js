@@ -1,39 +1,73 @@
 import "./SelectedShop.css";
 import React from "react";
 
-const SelectedShop = () => {
+const SelectedShop = ({ selectedShop }) => {
   return (
-    <div className='selectedShop'>
-     <header className='header'><h1>Cap Hill Coffee</h1></header>
-    <img src={shop.img} alt={shop.name} className='shopImg' />
-    <div className='shopDetailsContainer'>
-      <div className='shopDetailsBoxLeft'>
-        <div><strong>Address:</strong> {shop.address}</div>
-        <div><strong>Phone number:</strong> {shop.phoneNumber}</div>
-        <div><strong>Website:</strong> <a href={shop.website}>{shop.website}</a></div>
+    //entire container
+    <div className='selected-shop-container'>
+      //header container
+      <div className='header-container'>
+        <header>
+          <h1>Cap Hill Coffee</h1>
+        </header>
       </div>
-      <div className='shopDetailsBoxRight'>
-      <div><strong>Hours:</strong></div>
-      <div><strong>Services:</strong></div>
-      <ul>
-        {shop.dineIn && <li>Dine In</li>}
-        {shop.takeOut && <li>Take Out</li>}
-        {shop.wheelchairAccessible && <li>Wheelchair Accessible</li>}
-        {shop.foodProvided && <li>Food Provided</li>}
-      </ul>
-      </div>
-    </div>
-    <div className='rating'>Rating: {shop.rating}</div>
-    <div className='ratingIcons'>
-          <span role='img' aria-label='thumbs-up'>
-            👍
-          </span>
-          <span role='img' aria-label='thumbs-down'>
-            👎
-          </span>
-    </div>
+      //tan box container
+      <div className='page-container'>
+        //green box container
+        <div className='selected-shop-info-container'>
+          <div className='img-container'>
+            <img
+              src={selectedShop.img}
+              alt='coffee shop picture'
+              className='shop-img'
+            />
+          </div>
+          //parent containers left & right
+          <div className='shop-info-parent-container'>
+            <div className='shop-info-left-container'>
+              <p>
+                <strong>Address:</strong> {selectedShop.address}
+              </p>
+              <p>
+                <strong>Phone number:</strong> {selectedShop.phoneNumber}
+              </p>
+              <p>
+                <strong>Website:</strong>{" "}
+                <a href={selectedShop.website}>{selectedShop.website}</a>
+              </p>
+            </div>
+            <div className='shop-info-right-container'>
+              <p>
+                <strong>Hours:</strong>
+              </p>
+              <ul>
+                {selectedShop.dineIn && <li>Dine In</li>}
+                {selectedShop.takeOut && <li>Take Out</li>}
+                {selectedShop.wheelchairAccessible && (
+                  <li>Wheelchair Accessible</li>
+                )}
+                {selectedShop.foodProvided && <li>Food Provided</li>}
+              </ul>
+            </div>
+          </div>
+          //rating container
+          <div className='rating-container'>
+            <div className='average'>
+              <p>Average Rating: {selectedShop.rating}</p> 
+            </div>
+          //thumbs container
+            <div className='thumbs-container'>
+              <span role='img' aria-label='thumbs-up'>
+                👍
+              </span>
+              <span role='img' aria-label='thumbs-down'>
+                👎
+              </span>
+            </div>
+          </div>
         </div>
-  
+      </div>
+    </div>
   );
 };
 
