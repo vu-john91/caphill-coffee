@@ -1,4 +1,4 @@
-const dummyData = 
+const sampleCoffeeShops = 
   [
     {
       id: 1,
@@ -52,3 +52,5 @@ const dummyData =
       wheelchairAccessible: true,
     }
   ]
+
+  export default sampleCoffeeShops;

@@ -1,19 +1,19 @@
 import "./SelectedShop.css";
 import React from "react";
+// import { useParams } from "react-router-dom"
 
 const SelectedShop = ({ selectedShop }) => {
+
+// const { id } = useParams();
+
+// const selectedShop = shops.find((shop) => shop.id === id);
+
   return (
-    //entire container
+// entire container
     <div className='selected-shop-container'>
-      //header container
-      <div className='header-container'>
-        <header>
-          <h1>Cap Hill Coffee</h1>
-        </header>
-      </div>
-      //tan box container
+      {/* tan box container */}
       <div className='page-container'>
-        //green box container
+      {/* green box container */}
         <div className='selected-shop-info-container'>
           <div className='img-container'>
             <img
@@ -22,7 +22,7 @@ const SelectedShop = ({ selectedShop }) => {
               className='shop-img'
             />
           </div>
-          //parent containers left & right
+      {/* parent containers left & right */}
           <div className='shop-info-parent-container'>
             <div className='shop-info-left-container'>
               <p>
@@ -50,12 +50,12 @@ const SelectedShop = ({ selectedShop }) => {
               </ul>
             </div>
           </div>
-          //rating container
+        {/* rating container */}
           <div className='rating-container'>
             <div className='average'>
               <p>Average Rating: {selectedShop.rating}</p> 
             </div>
-          //thumbs container
+        {/* thumbs container */}
             <div className='thumbs-container'>
               <span role='img' aria-label='thumbs-up'>
                 👍
