@@ -1,12 +1,12 @@
 import "./SelectedShop.css";
 import React from "react";
-// import { useParams } from "react-router-dom"
+import { useParams } from "react-router-dom"
 
-const SelectedShop = ({ selectedShop }) => {
+const SelectedShop = ({ shops }) => {
 
-// const { id } = useParams();
+const { id } = useParams();
 
-// const selectedShop = shops.find((shop) => shop.id === id);
+const selectedShop = shops.find((shop) => shop.id === parseInt(id));
 
   return (
 // entire container

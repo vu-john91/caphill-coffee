@@ -8,14 +8,14 @@ import { useState } from "react";
 import { Routes, Route, Link, useLocation } from "react-router-dom";
 
 function App() {
-  const [selectedShop, setSelectedShop] = useState(sampleCoffeeShops);
+  const [shops, setShops] = useState(sampleCoffeeShops);
 
   return (
     <div className='App'>
       <Header />
       <Routes>
         <Route path='/' element={<CardContainer />} />
-        <Route path='/SelectedShop/1' element={<SelectedShop selectedShop={selectedShop} />} />
+        <Route path='/SelectedShop/:id' element={<SelectedShop shops={shops} />} />
         <Route path='/*' element={<Error />} />
       </Routes>
     </div>
