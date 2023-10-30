@@ -41,12 +41,12 @@ const selectedShop = shops.find((shop) => shop.id === parseInt(id));
                 <strong>Hours:</strong>
 
               </p>
-                {selectedShop.dineIn && <li>Dine In</li>}
-                {selectedShop.takeOut && <li>Take Out</li>}
+                {selectedShop.dineIn && <p>Dine In</p>}
+                {selectedShop.takeOut && <p>Take Out</p>}
                 {selectedShop.wheelchairAccessible && (
-                  <li>Wheelchair Accessible</li>
+                  <p>Wheelchair Accessible</p>
                 )}
-                {selectedShop.foodProvided && <li>Food Provided</li>} 
+                {selectedShop.foodProvided && <p>Food Provided</p>} 
             </div>
           </div>
         {/* rating container */}
