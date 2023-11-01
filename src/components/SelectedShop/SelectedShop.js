@@ -1,28 +1,28 @@
 import "./SelectedShop.css";
 import React from "react";
+import { useParams } from "react-router-dom"
 
-const SelectedShop = ({ selectedShop }) => {
+const SelectedShop = ({ shops }) => {
+
+const { id } = useParams();
+
+const selectedShop = shops.find((shop) => shop.id === parseInt(id));
+
   return (
-    //entire container
+// entire container
     <div className='selected-shop-container'>
-      //header container
-      <div className='header-container'>
-        <header>
-          <h1>Cap Hill Coffee</h1>
-        </header>
-      </div>
-      //tan box container
+      {/* tan box container */}
       <div className='page-container'>
-        //green box container
-        <div className='selected-shop-info-container'>
+      {/* green box container */}
+        <div className='shop-card-container'>
           <div className='img-container'>
             <img
               src={selectedShop.img}
               alt='coffee shop picture'
-              className='shop-img'
+              className='shop-img' 
             />
           </div>
-          //parent containers left & right
+      {/* parent containers left & right */}
           <div className='shop-info-parent-container'>
             <div className='shop-info-left-container'>
               <p>
@@ -39,23 +39,22 @@ const SelectedShop = ({ selectedShop }) => {
             <div className='shop-info-right-container'>
               <p>
                 <strong>Hours:</strong>
+
               </p>
-              <ul>
-                {selectedShop.dineIn && <li>Dine In</li>}
-                {selectedShop.takeOut && <li>Take Out</li>}
+                {selectedShop.dineIn && <p>Dine In</p>}
+                {selectedShop.takeOut && <p>Take Out</p>}
                 {selectedShop.wheelchairAccessible && (
-                  <li>Wheelchair Accessible</li>
+                  <p>Wheelchair Accessible</p>
                 )}
-                {selectedShop.foodProvided && <li>Food Provided</li>}
-              </ul>
+                {selectedShop.foodProvided && <p>Food Provided</p>} 
             </div>
           </div>
-          //rating container
+        {/* rating container */}
           <div className='rating-container'>
             <div className='average'>
               <p>Average Rating: {selectedShop.rating}</p> 
             </div>
-          //thumbs container
+        {/* thumbs container */}
             <div className='thumbs-container'>
               <span role='img' aria-label='thumbs-up'>
                 👍
