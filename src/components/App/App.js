@@ -22,3 +22,14 @@ function App() {
 }
 
 export default App;
+
+
+// coffeshop {
+//   ratings: [1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0]
+// }
+
+// goodRatings = coffeeshops.ratings.filter(num => num === 1) 
+
+// goodRatings.length / coffeeshop.ratings.length
+
+// 7/10 .6324 .toFixed(2)
