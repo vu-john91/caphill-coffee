@@ -8,6 +8,29 @@ const { id } = useParams();
 
 const selectedShop = shops.find((shop) => shop.id === parseInt(id));
 
+const handleReviewUpdate =(e) => {
+  e.preventDefault();
+  selectedShop.rating[e.target.value()] += 1
+  const bodyObj = {
+    id: id,
+    rating,
+
+  }
+  postReview(bodyObj)
+}
+
+const postReview = (bodyObj) => {
+ return fetch(`http://localhost:3001/api/v1/pathData/${id}`, {
+  method: "POST",
+  body: JSON.stringify(bodyObj),
+  headers: {
+    "Content-Type": "application/json",
+  }
+ })
+}
+
+
+
   return (
 // entire container
     <div className='selected-shop-container'>
