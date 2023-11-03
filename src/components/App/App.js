@@ -11,7 +11,7 @@ function App() {
   const [shops, setShops] = useState([]);
 
   const getShops = () => {
-    return fetch(`caphill-coffee-be.vercel.app`)
+    return fetch(`https://caphill-coffee-be.vercel.app`)
       .then(response => {
         if(!response.ok) {
           throw new Error(`${response.status} ${response.statusText}`)
