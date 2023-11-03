@@ -45,6 +45,59 @@ const handleReviewUpdate = async (id, ratingKeyToIncrement) => {
 }
 
 
+// const handleReviewUpdate =(e) => {
+//   e.preventDefault();
+//   selectedShop.rating[e.target.value()] += 1
+//   const bodyObj = {
+//     id: id,
+//     // rating,
+
+//   }
+//   postReview(bodyObj)
+// }
+console.log('id:', id)
+// const handleReviewUpdate = async (id, ratingKeyToIncrement) => {
+//   console.log("Updating rating for ID:", id, " Incrementing:", ratingKeyToIncrement);
+
+//   return fetch(`http://localhost:3001/SelectedShop/${id}`, {
+//     method: 'POST',
+//     headers: {
+//       'Content-Type': 'application/json',
+//     },
+//     body: JSON.stringify({ ratingKey: ratingKeyToIncrement }),
+//   })
+//   .then(response => {
+//     if (!response.ok) {
+//       throw new Error('Network response was not ok ' + response.statusText);
+//     }
+//     return response.json();
+//   })
+//   .then(updatedCoffeeShop => {
+//     console.log('Updated Coffee Shop:', updatedCoffeeShop);
+//   })
+//   .catch(error => {
+//     console.error('Request failed:', error);
+//   });
+// }
+
+
+// You need to call the function with both the `id` and the rating key to increment.
+//handleReviewUpdate(1, 'thumbsUp'); // Assuming the ID of the coffee shop is 1.
+
+
+
+
+// const postReview = (bodyObj) => {
+//  return fetch(`http://localhost:3001/api/v1/pathData/${id}`, {
+//   method: "POST",
+//   body: JSON.stringify(bodyObj),
+//   headers: {
+//     "Content-Type": "application/json",
+//   }
+//  })
+// }
+
+
 
   return (
 // entire container
