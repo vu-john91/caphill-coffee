@@ -52,7 +52,7 @@ console.log(shops)
 
 const shopCards = shops.map((shop) => {
   return (
-    <Link to={`https:/caphill-coffee-be.vercel.app/SelectedShop/${shop.id}`} key={shop.id}>
+    <Link to={`/SelectedShop/${shop.id}`} key={shop.id}>
         <div className="card" >
           <Card
             name={shop.name}
