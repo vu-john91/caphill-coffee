@@ -4,7 +4,7 @@ import Card from '../Card/Card'
 import { Routes, Route, Link, useLocation } from 'react-router-dom'
 
 const CardContainer = ( { shops }) => {
-
+console.log(shops)
 // const [shops, setShops] = useState([])
 
 // const getShops = () => {
