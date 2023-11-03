@@ -23,7 +23,7 @@ console.log("selectedShop:=====", selectedShop);
 const handleReviewUpdate = async (id, ratingKeyToIncrement) => {
   console.log("Updating rating for ID:", id, " Incrementing:", ratingKeyToIncrement);
 
-  return fetch(`https://aphill-coffee-be.vercel.app/SelectedShop/${id}`, {
+  return fetch(`https://caphill-coffee-be.vercel.app/SelectedShop/${id}`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
